@@ -1,0 +1,9 @@
+1: Bank Application
+Create a dictionary that stores Bank account information for someone who has multiple bank accounts
+1a: Initial information should contain firstname, lastname, bank_name, account_number and branch_code
+1b: Add a new attribute to the dictionary for balance; eg. balance=0.00
+1c: Create a deposit function that accepts amount as arguments and increase the balance in the dictionary by the amount
+1d: Create a withdraw function that accepts amount, checks to see if the balance is available for withdrawal, 
+then withdraw the amount by subtracting the amount from the balance.
+1e: Use the functions defined above and deposit 200 naira. Then withdraw 50 naira.
+1f: Print the Bank account information
