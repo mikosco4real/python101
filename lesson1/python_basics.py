@@ -82,7 +82,7 @@ def login(u, p):
     if (u in usernames):
         index_of_u = usernames.index(u)
         if (p == passwords[index_of_u]):
-            print("Logged In successfully")
+            print("Logged In successfully, Welcome {}".format(u))
         else:
             print("Check your password and try again")
     else:

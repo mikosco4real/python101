@@ -1,0 +1,12 @@
+1. Find the length of a given string
+2. Given a string. The task is to print all words with even length in the given string. i.e -> words that the length is an even number
+3. Find the number of characters in a given string ignoring the spaces.
+4. Find the unique characters in a given string ignoring spaces
+5. Python program to check whether the string is Symmetrical or Palindrome - Given a string. the task is to check if the string is symmetrical and palindrome or not. A string is said to be symmetrical if both the halves of the string are the same and a string is said to be a palindrome string if one half of the string is the reverse of the other half or if a string appears same when read forward or backward.
+6. Calculate the sum of the digits in a given string eg: "personify232 and five one 51" = 2+3+2+5+1 = 13
+7. Write a Python program to add 'ing' at the end of a given string (length should be at least 3). If the given string already ends with 'ing' then add 'ly' instead. If the string length of the given string is less than 3, leave it unchanged.
+    Sample String : 'abc'
+    Expected Result : 'abcing'
+    Sample String : 'string'
+    Expected Result : 'stringly'
+8. Write a Python program to check whether any word in a given sting contains duplicate characrters or not. Return True or False.
