@@ -10,8 +10,9 @@ y = 11
 def convert_celsius_to_fahrenheit(c: int) -> int:
     return (c * 9/5) + 32
 
-celsius = 30
+celsius = 100
 fahrenheit = convert_celsius_to_fahrenheit(celsius)
+#print(fahrenheit)
 
 # Almighty quadratic equation formula ax2 + bx + c = 0 -> (x1, x2)
 def quadratic_solution(a=0, b=0, c=0):
