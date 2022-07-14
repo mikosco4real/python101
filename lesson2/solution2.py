@@ -105,3 +105,14 @@ else:
 
 #To determine a duplicate value in a string
 
+def duplicate_letters(string):
+    word_list = string.split()
+    for word in word_list:
+        if len(word) == len(set(word)):
+            return False
+        else:
+            return True
+
+string4 = input("Enter the string you wish to check: ")
+duplicate_letters(string4)
+
