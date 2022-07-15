@@ -9,11 +9,10 @@ length_of_string = len(usernames) #length of the string usernames
 #To print out words with even length in the string 
 split_usernames = usernames.split(" ")
 
-def print_even_words(usernames):
-    for n in split_usernames:
+def print_even_words(words):
+    for n in words.split(" "): # TODO: Use the argument you passed into the function
         if len(n)%2 == 0:
             print(n)
-
 
 #print_even_words(usernames)
 
@@ -28,12 +27,11 @@ username1 = new_username
 
 unique_characters_set = set(username1)
 unique_characters1 = str(unique_characters_set)
-unique_characters = "".join(unique_characters1.split())
-#print(unique_characters)
+unique_characters = "".join(unique_characters_set)
+# print(unique_characters)
 
 #Python program to check whether the string Palindrome or symmetrical
 #Check whether the string is Palindrome
-
 
 def palin(string):
     st = 0         #declare and initialize with the starting and ending indices
@@ -53,9 +51,9 @@ def palin(string):
     else:
         print("The entered string is not a palindrome.")
 
-string1 = input("Enter the string: ")
+# string1 = input("Enter the string: ")
 
-palin(string1)
+# palin(string1)
 
 
 #Symmetrical function to check if string is symmetrical or not.
@@ -87,19 +85,19 @@ def symm(string):
             
         
 
-string2 = input("Enter your string: ")
+# string2 = input("Enter your string: ")
 
-symm(string2)
+# symm(string2)
 
+# TODO: Improve this to be a function
+# string3 = input("Enter a string of choice: ")
 
-string3 = input("Enter a string of choice: ")
-
-if len(string3) < 3:
-    print("String is less than 3 characters")
-elif string3.endswith('ing'):
-    print(string3 + 'ly')
-else: 
-    print(string3 + 'ing') 
+# if len(string3) < 3:
+#     print("String is less than 3 characters")
+# elif string3.endswith('ing'):
+#     print(string3 + 'ly')
+# else: 
+#     print(string3 + 'ing') 
 
 
 #To determine a duplicate value in a string
@@ -113,5 +111,5 @@ def duplicate_letters(string):
             return True
 
 string4 = input("Enter the string you wish to check: ")
-duplicate_letters(string4)
+print(duplicate_letters(string4))
 
