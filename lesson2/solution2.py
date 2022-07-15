@@ -92,7 +92,6 @@ string2 = input("Enter your string: ")
 symm(string2)
 
 
-
 string3 = input("Enter a string of choice: ")
 
 if len(string3) < 3:
