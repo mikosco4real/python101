@@ -16,6 +16,12 @@
 
 
 # #print_even_words(usernames)
+def print_even_words(words):
+    for n in words.split(" "): # TODO: Use the argument you passed into the function
+        if len(n)%2 == 0:
+            print(n)
+
+#print_even_words(usernames)
 
 # #To find the number of characters in the string while ignoring spaces 
 # new_username = "".join(usernames.split())
@@ -26,19 +32,18 @@
 # #To get find the unique chharacters in the string while ignoring spaces
 # username1 = new_username
 
-# unique_characters_set = set(username1)
-# unique_characters1 = str(unique_characters_set)
-# unique_characters = "".join(unique_characters1.split())
-# #print(unique_characters)
+unique_characters_set = set(username1)
+unique_characters1 = str(unique_characters_set)
+unique_characters = "".join(unique_characters_set)
+# print(unique_characters)
 
 # #Python program to check whether the string Palindrome or symmetrical
 # #Check whether the string is Palindrome
 
-
-# def palin(string):
-#     st = 0         #declare and initialize with the starting and ending indices
-#     end = len(string) - 1
-#     f = 0  
+def palin(string):
+    st = 0         #declare and initialize with the starting and ending indices
+    end = len(string) - 1
+    f = 0  
 
 #     #loop comparing letters moving from start to end and from end to start
 #     while (st < end):
@@ -93,6 +98,8 @@
 
 from asyncio.trsock import TransportSocket
 
+# TODO: Improve this to be a function
+# string3 = input("Enter a string of choice: ")
 
 # def word_transform(string):
 #     if len(string) < 3:
@@ -118,6 +125,8 @@ from asyncio.trsock import TransportSocket
 
 # string4 = input("Enter the string you wish to check: ")
 # print([duplicate_letters(string4)])
+string4 = input("Enter the string you wish to check: ")
+print(duplicate_letters(string4))
 
 def sum_digits(string):
     sum_digit = 0
