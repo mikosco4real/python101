@@ -30,3 +30,17 @@ c = 1
 solution = quadratic_solution(a, b, c)
 
 print(f"{a}x2 + {b}x + {c} evaluates to x={solution[0]:.2f} or x={solution[1]:.2f}")
+
+def calculate_numbers(string):
+    sum_total = 0
+    for n in string:
+        if n.isdigit:
+            z = int(n)
+            sum_total = sum_total + z
+    print("Total:-", sum_total)
+
+string = "humongousour763 and five three 53"
+
+calculate_numbers(string)
+
+
