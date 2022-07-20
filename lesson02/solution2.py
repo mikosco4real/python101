@@ -32,9 +32,9 @@ def print_even_words(words):
 # #To get find the unique chharacters in the string while ignoring spaces
 # username1 = new_username
 
-unique_characters_set = set(username1)
-unique_characters1 = str(unique_characters_set)
-unique_characters = "".join(unique_characters_set)
+# unique_characters_set = set(username1)
+# unique_characters1 = str(unique_characters_set)
+# unique_characters = "".join(unique_characters_set)
 # print(unique_characters)
 
 # #Python program to check whether the string Palindrome or symmetrical
@@ -125,11 +125,11 @@ from asyncio.trsock import TransportSocket
 
 # string4 = input("Enter the string you wish to check: ")
 # print([duplicate_letters(string4)])
-string4 = input("Enter the string you wish to check: ")
-print(duplicate_letters(string4))
+# string4 = input("Enter the string you wish to check: ")
+# print(duplicate_letters(string4))
 
 def sum_digits(string):
-    sum_digit = 0
+    sum_digit = 0 
     for number in string:
         if number.isdigit() == True:
             z = int(number)
@@ -137,5 +137,34 @@ def sum_digits(string):
             
     return sum_digit
     
-string5 = input("Enter string with digits: ")
-print(sum_digits(string5))
+string5 = "edfi3ij2lj4"
+
+def palindrome(word: str) -> bool:
+    if len(word) % 2 == 0:
+        half_word = len(word)//2
+        part1 = word[:half_word]
+        part2 = word[half_word:]
+        return part1 == part2[::-1]
+    else:
+        return word == word[::-1]
+
+def symmetry(word: str) -> bool:
+    if len(word) % 2 == 0:
+        half_word = len(word)//2
+        part1 = word[:half_word]
+        part2 = word[half_word:]
+        return part1 == part2
+    else:
+        return False
+
+def checkword_for_sym_or_palin(word):
+    if palindrome(word) and symmetry(word):
+        return f"{word} is both palindrom and symmetry"
+    elif palindrome(word):
+        return f"{word} is a Palindrome but not a symmetry"
+    elif symmetry(word):
+        return f"{word} is a Symmetry but not a palindrome"
+    else:
+        return f"{word} is neither a symmetry or a palindrome"
+
+print(checkword_for_sym_or_palin('wowwow'))
