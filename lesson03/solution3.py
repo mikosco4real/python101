@@ -13,6 +13,21 @@ def fibonacci_without_recursion(n: int) -> int:
          return (fibonacci(n-1) + fibonacci(n-2))
 
 
+def reversed_number(num: int) -> int:
+
+    """Given a number, write a function to output its reverse digits. 
+    (e.g. given 123 the answer is 321) Make sure that if it is a negative 
+    number you keep the negative in the front (-123 becomes -321)
+    """
+    reversed_num = 0
+    
+    while n != 0:
+        digit = n % 10
+        reversed_num = reversed_num * 10 + digit
+        n = n // 10
+    return reversed_num
+        
+
 # Examiners Section
 import unittest
 import logging
