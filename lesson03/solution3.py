@@ -43,7 +43,7 @@ class TestAssessmentResults(unittest.TestCase):
         self.assertEqual(fibonacci(3), 1)
         self.assertEqual(fibonacci(4), 2)
         self.assertEqual(fibonacci(20), 4181)
-        self.assertEqual(fibonacci(35), 9227465)
+        self.assertEqual(fibonacci(35), 5702887)
         LOGGER.info("Fibonacci passed the test successfully")
 
 
