@@ -12,7 +12,6 @@ def reversed_number(num: int) -> int:
     """
     pass
 
-
 # Examiners Section
 
 import unittest
