@@ -7,10 +7,25 @@ def fibonacci(num: int) -> int:
 
 
 def fibonacci_without_recursion(n: int) -> int:
-    if n> 0 and n <= 2:
-         return (n - 1)
-    else:
-         return (fibonacci(n-1) + fibonacci(n-2))
+    last_number = 0
+    last_two_numbers = 0
+    iteration = 1
+    fib = 0
+
+    while iteration < n:
+        iteration += 1
+        if iteration == 1:
+            continue
+        if iteration == 2:
+            fib = 1
+            last_number = 1
+            continue
+
+        fib = last_number + last_two_numbers
+        last_two_numbers = last_number
+        last_number = fib
+
+    return fib
 
 
 def reversed_number(num: int) -> int:
@@ -22,7 +37,7 @@ def reversed_number(num: int) -> int:
 
     reversed_num = 0
     negative = False
-
+    
     if num < 0:
         negative = True
         num = num * (-1)
@@ -31,13 +46,24 @@ def reversed_number(num: int) -> int:
         digit = num % 10
         reversed_num = reversed_num * 10 + digit
         num = num // 10
-
+    
     if negative:
-        return reversed_num * (-1)    
-
+        return reversed_num * (-1)
     return reversed_num
 
+def reversed_number_2(num: int) -> int:
+    num = str(num)
+    if num.startswith('-'):
+        num = num[1:]
+        return int("-" + "".join(reversed(num)))
+
+    return int(num[::-1])
+        
+
+print(fibonacci_without_recursion(9))
+
 # Examiners Section
+
 import unittest
 import logging
 
@@ -54,6 +80,14 @@ class TestAssessmentResults(unittest.TestCase):
         self.assertEqual(fibonacci(20), 4181)
         self.assertEqual(fibonacci(35), 5702887)
         LOGGER.info("Fibonacci passed the test successfully")
+    
+    def test_reversed_number(self):
+        self.assertEqual(reversed_number(234), 432)
+        self.assertEqual(reversed_number(123), 321)
+        self.assertEqual(reversed_number(-3247832), -2387423)
+        self.assertEqual(reversed_number(123456789), 987654321)
+        self.assertEqual(reversed_number(23324958), 85942332)
+        LOGGER.info("Reversed Number passed the test successfully")
 
 
 
