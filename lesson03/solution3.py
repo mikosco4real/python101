@@ -1,13 +1,13 @@
 def fibonacci(num: int) -> int:
      # Write your code below
-     if num>= 0 and num <= 2:
+     if num> 0 and num <= 2:
          return (num - 1)
      else:
          return (fibonacci(num-1) + fibonacci(num-2))
 
 
 def fibonacci_without_recursion(n: int) -> int:
-    if n>= 0 and n <= 2:
+    if n> 0 and n <= 2:
          return (n - 1)
     else:
          return (fibonacci(n-1) + fibonacci(n-2))
@@ -19,14 +19,23 @@ def reversed_number(num: int) -> int:
     (e.g. given 123 the answer is 321) Make sure that if it is a negative 
     number you keep the negative in the front (-123 becomes -321)
     """
+
     reversed_num = 0
+    negative = False
+
+    if num < 0:
+        negative = True
+        num = num * (-1)
     
-    while n != 0:
-        digit = n % 10
+    while num != 0:
+        digit = num % 10
         reversed_num = reversed_num * 10 + digit
-        n = n // 10
+        num = num // 10
+
+    if negative:
+        return reversed_num * (-1)    
+
     return reversed_num
-        
 
 # Examiners Section
 import unittest
