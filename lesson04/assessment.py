@@ -3,8 +3,13 @@ def format_number(num: int) -> str:
     Your function should convert the number to a string and add commas as a thousand separators. 
     For example, calling format_number(1000000) should return "1,000,000"
     """
-    # Your code goes here
-    pass
+    new_num = 1000   
+    if num < new_num:
+        return str(num)
+    return str('{:,}'.format(num))
+    
+             
+    
 
 # Examiners Section
 
