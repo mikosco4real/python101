@@ -1,6 +1,6 @@
 def fibonacci(num: int) -> int:
      # Write your code below
-     if num>= 0 and num <= 2:
+     if num> 0 and num <= 2:
          return (num - 1)
      else:
          return (fibonacci(num-1) + fibonacci(num-2))
@@ -34,6 +34,7 @@ def reversed_number(num: int) -> int:
     (e.g. given 123 the answer is 321) Make sure that if it is a negative 
     number you keep the negative in the front (-123 becomes -321)
     """
+
     reversed_num = 0
     negative = False
     
