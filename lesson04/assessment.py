@@ -1,12 +1,19 @@
+# def format_number(num: int) -> str:
+#     """Write a function named 'format_number' that takes a non-negative number as its only parameter. 
+#     Your function should convert the number to a string and add commas as a thousand separators. 
+#     For example, calling format_number(1000000) should return "1,000,000"
+#     """
+#     new_num = 1000   
+#     if num < new_num:
+#         return str(num)
+#     return str('{:,}'.format(num))
+
 def format_number(num: int) -> str:
     """Write a function named 'format_number' that takes a non-negative number as its only parameter. 
     Your function should convert the number to a string and add commas as a thousand separators. 
     For example, calling format_number(1000000) should return "1,000,000"
     """
-    new_num = 1000   
-    if num < new_num:
-        return str(num)
-    return str('{:,}'.format(num))
+    return f'{num:,}'
     
              
     
