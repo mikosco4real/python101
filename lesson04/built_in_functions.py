@@ -330,3 +330,19 @@ for i in range(10):
     print(random.choice(outcome))
 
 
+
+# sums = []
+#     s = 0
+#     for i in range(len(arr)):
+#         for j in range(len(arr)):
+#             s += arr[j]
+#         s = s - arr[i]
+#         sums.append(s)
+#         s = 0
+#     low = high = sums[1]
+#     for i in range(len(sums)):
+#         if low > sums[i]: 
+#             low = sums[i]
+#         if high < sums[i]:
+#             high = sums[i]
+#     print(low, high)
