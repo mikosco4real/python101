@@ -5,15 +5,18 @@
 # reduce
 # product
 # lambda
-# os
 # enumerate
 # zip
+# os
 # eval
 # sorted
 # abs
 # min
 # max
 # Random
+# re
+# iterators
+# generators
 
 # File Handling
 # CSV
@@ -22,6 +25,7 @@ from datetime import datetime
 
 from datetime import timezone
 from itertools import product
+from multiprocessing.pool import ApplyResult
 
 current_time = datetime.now()
 
@@ -56,4 +60,41 @@ def solve(a, b, c):
 
 add_5 = partial(add, 5)
 
-print(add_5(2))
+def hello1(name):
+    print("Hello "+ name)
+
+# Lambda
+hello = lambda name: print("Hello " + name)
+
+# Map, Reduce, Product
+
+num = [1,2,3,4,5,6]
+num2 = [5,6,7,8,9,10]
+
+# print(list(map(lambda x: x ** 2, num)))
+
+# print(list(product(num, num2)))
+
+# print(reduce(lambda x,y: x+y, num))
+
+
+# Enumerate, Zip
+
+iter1 = [1,2,3,4,5]
+iter2 = [6,7,8,9,10]
+# print(list(zip(iter1, iter2)))
+
+firstname = ["Michael", "David", "Jude"]
+lastname = ["Sage", "Onwudufor", "Okeke", "Okolo"]
+
+# for f, l in zip(firstname, lastname):
+#     print(f,l)
+
+
+fruits = ["apple", "banana", "mango", "paw paw", "pineapple"]
+
+# for i in range(len(fruits)):
+#     print(f"{i+1}. {fruits[i]}")
+
+for index, fruit in enumerate(fruits, start=1):
+    print(f"{index}. {fruit}")
