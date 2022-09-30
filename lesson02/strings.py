@@ -22,8 +22,8 @@ capitalise_last = word[:-1] + word[-1].capitalize()
 
 # split words and make changes and join them again
 word_split = list(word)
-capitalise_last_word = (" ").join(word_split[:-1]) + word_split[-1].capitalize()
-#print(capitalise_last_word)
+capitalise_last_word = ("").join(word_split[:7]) + word_split[-2].capitalize() + word[8]
+print(capitalise_last_word)
 # Print each letter in word separated by space
 spaced_word = " ".join(word)
 print(spaced_word)
