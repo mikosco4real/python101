@@ -1,19 +1,13 @@
 
-# usernames = "let us talk about the python language okay"
-# string_usernames = list(usernames)
-# capitalize_string = usernames.capitalize()
+usernames = "let us talk about the python language okay"
+string_usernames = list(usernames)
+capitalize_string = usernames.capitalize()
 
-# length_of_string = len(usernames) #length of the string usernames
-# #print(length_of_string)
+length_of_string = len(usernames) #length of the string usernames
+ #print(length_of_string)
 
-# #To print out words with even length in the string 
-# split_usernames = usernames.split(" ")
-
-# def print_even_words(usernames):
-#     for n in split_usernames:
-#         if len(n)%2 == 0:
-#             print(n)
-
+ #To print out words with even length in the string 
+split_usernames = usernames.split(" ")
 
 # #print_even_words(usernames)
 def print_even_words(words):
@@ -131,7 +125,7 @@ from asyncio.trsock import TransportSocket
 def sum_digits(string):
     sum_digit = 0 
     for number in string:
-        if number.isdigit() == True:
+        if number.isdigit():
             z = int(number)
             sum_digit = sum_digit + z
             
@@ -147,6 +141,7 @@ def palindrome(word: str) -> bool:
         return part1 == part2[::-1]
     else:
         return word == word[::-1]
+
 
 def symmetry(word: str) -> bool:
     if len(word) % 2 == 0:
@@ -167,4 +162,4 @@ def checkword_for_sym_or_palin(word):
     else:
         return f"{word} is neither a symmetry or a palindrome"
 
-print(checkword_for_sym_or_palin('wowwow'))
+print(checkword_for_sym_or_palin('komkom'))
