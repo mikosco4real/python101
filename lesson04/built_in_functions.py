@@ -96,5 +96,18 @@ fruits = ["apple", "banana", "mango", "paw paw", "pineapple"]
 # for i in range(len(fruits)):
 #     print(f"{i+1}. {fruits[i]}")
 
-for index, fruit in enumerate(fruits, start=1):
-    print(f"{index}. {fruit}")
+# for index, fruit in enumerate(fruits, start=1):
+#     print(f"{index}. {fruit}")
+
+# The spread operator *
+
+def say_hi(firstname, lastname):
+    print(f"Hello {firstname}, {lastname}. How are you?")
+
+name1 = ["Michael", "Okolo"]
+name2 = ["Ender", "Onwudufor"]
+name3 = ["Sage", "Michael"]
+
+say_hi(*name1)
+say_hi(*name2)
+say_hi(name3[0], name3[1])
