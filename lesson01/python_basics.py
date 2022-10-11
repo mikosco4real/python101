@@ -109,4 +109,5 @@ for user in usernames:
 #  Built in function - range
 print("for loop")
 for numbers in range(10):
-    print(numbers)
+    product = numbers * 6
+    print(f"{product} = 6 x {numbers}")
